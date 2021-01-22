@@ -19,6 +19,14 @@ Keep in mind CORS limitations.
 
 - [if you have issues with Mint 20 and docker installation](https://forums.docker.com/t/cant-install-docker-on-ubuntu-20-04/93058/2)
 
+# How to start
+
+```bash
+yarn
+ng build --prod --localize
+sudo ./run.sh
+```
+
 # Build
 
 To build angular localize version, and then serve it with docker: 
