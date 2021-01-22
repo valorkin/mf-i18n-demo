@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "n18n": {
+    "mf-i18n": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": ["ru"],
-            "outputPath": "dist/n18n",
+            "outputPath": "dist/mfi18n",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "n18n:build"
+            "browserTarget": "mf-i18n:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "n18n:build:production"
+              "browserTarget": "mf-i18n:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "n18n:build"
+            "browserTarget": "mf-i18n:build"
           }
         },
         "test": {
@@ -110,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "n18n:serve"
+            "devServerTarget": "mf-i18n:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "n18n:serve:production"
+              "devServerTarget": "mf-i18n:serve:production"
             }
           }
         }
@@ -127,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "n18n"
+  "defaultProject": "mf-i18n"
 }
