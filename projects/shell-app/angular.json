@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-trans": {
+    "shell-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -18,7 +18,7 @@
             "extractCss": false,
             "extractLicenses": false,
             "progress": false,
-            "outputPath": "dist/ngx-trans",
+            "outputPath": "dist/shell-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -44,9 +44,8 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": false,
               "namedChunks": false,
-              "extractLicenses": false,
+              "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
@@ -65,22 +64,21 @@
           }
         },
         "serve": {
-          "builder": "ngx-build-plus:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-trans:build",
-            "port": 4202,
-            "extraWebpackConfig": "webpack.extra.js"
+            "browserTarget": "shell-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-trans:build:production"
+              "browserTarget": "shell-app:build:production"
             }
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "ngx-trans:build"
+            "extraWebpackConfig": "webpack.extra.js",
+            "browserTarget": "shell-app:build"
           }
         },
         "test": {
@@ -117,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-trans:serve"
+            "devServerTarget": "shell-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-trans:serve:production"
+              "devServerTarget": "shell-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-trans"
+  "defaultProject": "shell-app"
 }

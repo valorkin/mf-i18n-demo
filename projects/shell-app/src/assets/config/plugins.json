@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ngxtranslate",
+    "version": "1.0.0",
+    "provider": "Ariba",
+    "uri": "http://localhost:4202/remoteEntry.js",
+    "modules": [
+      {
+        "name": "NgxtransModule",
+        "component": "NgxtransComponent",
+        "type": "angular-ivy-component",
+        "exposedModule": "./NgxTranslateDemo"
+      }
+    ]
+  }
+]
+
