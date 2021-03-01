@@ -12,6 +12,14 @@
         <note priority="1" from="description">An introduction header for this sample</note>
         <note priority="1" from="meaning">site header</note>
       </trans-unit>
+      <trans-unit id="cff0dc2d2da627c1b6e81a7938766a1175e9cdfd" datatype="html">
+        <source>some content</source>
+        <target>просто контент</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/module/module.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

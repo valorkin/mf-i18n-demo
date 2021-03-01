@@ -15,7 +15,6 @@
           "options": {
             "extraWebpackConfig": "webpack.extra.js",
             "sourceMap": false,
-            "extractCss": false,
             "extractLicenses": false,
             "progress": false,
             "outputPath": "dist/ngx-trans",
@@ -44,7 +43,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": false,
               "namedChunks": false,
               "extractLicenses": false,
               "vendorChunk": false,

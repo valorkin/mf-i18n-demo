@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, Inject, LOCALE_ID, NgModule } from '@angular/core';
 
 @Component({
   selector: 'some-component',
@@ -6,6 +6,9 @@ import { Component, NgModule } from '@angular/core';
 })
 export class SomeComponent {
 
+  constructor(@Inject(LOCALE_ID) locale: string){
+    console.log('remote app locale', locale);
+  }
 }
 
 @NgModule({
