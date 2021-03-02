@@ -7,8 +7,6 @@ services:
       - ./projects/ng-localize/dist/mfi18n:/usr/share/nginx/html
     ports:
       - "4202:4202"
-    links:
-      - shell-app:shell-app
 
   shell-app:  
     container_name: shell-app
@@ -18,3 +16,5 @@ services:
       - ./projects/shell-app/dist/shell-app:/usr/share/nginx/html
     ports:
       - "4201:4201"
+    links:
+     - ng-localize
