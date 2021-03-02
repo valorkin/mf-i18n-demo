@@ -1,0 +1,20 @@
+services:
+  ng-localize:
+    container_name: ng-localize
+    restart: always
+    build: ./projects/ng-localize
+    volumes:
+      - ./projects/ng-localize/dist/mfi18n:/usr/share/nginx/html
+    ports:
+      - "4202:4202"
+    links:
+      - shell-app:shell-app
+
+  shell-app:  
+    container_name: shell-app
+    restart: always
+    build: ./projects/shell-app/
+    volumes:
+      - ./projects/shell-app/dist/shell-app:/usr/share/nginx/html
+    ports:
+      - "4201:4201"
